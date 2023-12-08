@@ -84,31 +84,21 @@ window.addEventListener("scroll" , function(){
         
 })
 
-$('.video-slider .owl-carousel').owlCarousel({
-    nav: true,
-    dots: false,
-    loop: false,
-    autoplay: false,
-    autoplayHoverPause: true,
-    responsiveClass: true,
-    margin: 20,
-    rtl: true,
-    responsive:{
-        0:{
-            items:2
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:4
-        }
-    }
-});
+// make auth-img circle 
+var authWidth = $('.feature').width();
+$('.feature').height(authWidth)
+// -- responsive --
+$(window).resize(function(){
+  var authWidth = $('.feature').width();
+$('.feature').height(authWidth)
+})
+
 $(".project-wrapper .items-container.owl-carousel").owlCarousel({
     nav: true,
+    navText : ['<i class="bi bi-arrow-right"></i>','<i class="bi bi-arrow-left"></i>'],
     dots: false,
-    loop: false,
+    loop: true,
+    stagePadding: 80,
     autoplay: false,
     autoplayHoverPause: true,
     responsiveClass: true,
@@ -122,8 +112,54 @@ $(".project-wrapper .items-container.owl-carousel").owlCarousel({
             items: 3
         },
         1000: {
-            items: 4
+            items: 3
         }
     }
-  });
+});
+$('.img-slider .owl-carousel').owlCarousel({
+    nav: false,
+    dots: true,
+    loop: true,
+    stagePadding: 80,
+    autoplay: false,
+    autoplayHoverPause: true,
+    responsiveClass: true,
+    margin: 20,
+    rtl: true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+$('.video-slider .owl-carousel').owlCarousel({
+    nav: true,
+    navText : ['<i class="bi bi-arrow-right"></i>','<i class="bi bi-arrow-left"></i>'],
+    dots: false,
+    loop: true,
+    stagePadding: 80,
+    autoplay: false,
+    autoplayHoverPause: true,
+    responsiveClass: true,
+    margin: 20,
+    rtl: true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+
 
