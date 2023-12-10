@@ -162,4 +162,7 @@ $('.video-slider .owl-carousel').owlCarousel({
     }
 });
 
+//  aos animation
+AOS.init();
+
 
